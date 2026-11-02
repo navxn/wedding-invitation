@@ -11,7 +11,7 @@ js/main.js          links, repeatable scroll reveal, countdown, gold dust, music
 js/decor.js         gold corner flourishes, lotus gardens, shimmer, touch effects
 js/autoscroll.js    guided auto-scroll after the first manual scroll (pause button)
 js/ending.js        end of invitation: pull past the end / tap cue to glide back
-assets/img          emerald.jpg, ganesha-emblem*.png, g-*.svg, favicon, invite-preview.jpg (1200×630)
+assets/img          emerald.jpg, ganesha-emblem*.png, g-*.svg, favicon, invite-preview-v2.jpg (1200×630)
 assets/audio        music.mp3
 .nojekyll           tells GitHub Pages to serve the folder as-is
 ```
@@ -27,8 +27,8 @@ The link-preview tags in `index.html` assume
 2. **Add file → Upload files** → drag in everything in this folder (keep the folders, include `.nojekyll`) → Commit.
 3. **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / `(root)` → Save.**
 4. Wait ~1 minute. The site is at `https://<user>.github.io/<repo>/`.
-   If that is not `https://navxn.github.io/wedding-invitation/`, replace that address in the five
-   places in `index.html` (`canonical`, `og:url`, `og:image`, `og:image:secure_url`, `twitter:image`) and commit.
+   If that is not `https://navxn.github.io/wedding-invitation/`, replace that address in the three
+   places in `index.html` (`og:image`, `og:image:secure_url`, `twitter:image`) and commit.
 
 **Option B — command line** (GitHub CLI, run inside this folder)
 ```
@@ -39,7 +39,7 @@ gh api -X POST repos/{owner}/wedding-invitation/pages -f "source[branch]=main" -
 
 ## Check after publishing
 - Open the public URL on a phone: opening screen, music button, scroll animations, Maps / Calendar / WhatsApp buttons.
-- Open `…/assets/img/invite-preview.jpg` directly: it must show the emerald "You're Invited" image.
+- Open `…/assets/img/invite-preview-v2.jpg` directly: it must show the emerald "You're Invited" image.
 - WhatsApp preview: paste the link in a chat. WhatsApp caches previews; if it looks wrong, add `?v=2` to the link you share, or test with the Facebook Sharing Debugger (developers.facebook.com/tools/debug).
 
 ## Edit
