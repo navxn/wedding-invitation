@@ -252,6 +252,7 @@ document.querySelectorAll('.flower-sep, .divider').forEach(el =>
     const p = Math.min(1, Math.max(0, -op.getBoundingClientRect().top / range));
     nums.forEach((n, i) => n.classList.toggle('on', noMotion || p >= 0.12 + i * 0.26));
     stick.style.setProperty('--p', p.toFixed(3));
+    document.body.classList.toggle('in-open', p < .6);
     if (hint) hint.style.opacity = String(Math.max(0, 1 - p * 5));
   };
   const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
