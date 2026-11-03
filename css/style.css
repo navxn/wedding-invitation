@@ -287,7 +287,8 @@ h1,h2,h3,p{text-wrap:balance;overflow-wrap:break-word}
 .names>span{display:block;width:max-content;margin:0 auto;white-space:nowrap}
 .names .and{
   font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:.4em;letter-spacing:.35em;margin:.5em 0;
+  font-size:.4em;letter-spacing:.35em;line-height:1;
+  margin:.6em auto .62em;padding-left:.35em;   /* centred: margin auto + the trailing letter-space is balanced */
 }
 .scroll-hint{color:var(--gold);font-size:1.2rem;text-decoration:none;animation:drift 2.6s ease-in-out infinite}
 
