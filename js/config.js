@@ -4,12 +4,12 @@
    Calendar times are UTC (IST = UTC + 5:30).
 ============================================================ */
 const INVITE = {
-  names: "Dr. Nimisha Suresh & Dr. Rijul Padmanabhan M.",
+  names: "Dr. Nimisha Suresh & Dr. Rijul Padmanabhan",
   eventWord: "Wedding",
 
   /* Muhurtham: Thu 26 Nov 2026, 11.25 a.m. – 11.50 a.m. IST */
   wedding: {
-    title: "Wedding of Dr. Nimisha Suresh & Dr. Rijul Padmanabhan M.",
+    title: "Wedding of Dr. Nimisha Suresh & Dr. Rijul Padmanabhan",
     startUTC: "20261126T055500Z",
     endUTC:   "20261126T062000Z",
     details: "Muhurtham between 11.25 a.m. and 11.50 a.m. Followed by further marital ceremonies at Vishnu Inn, Near East Nada, Guruvayoor.",
@@ -26,7 +26,7 @@ const INVITE = {
 
   /* Reception: Mon 30 Nov 2026, 4.30 p.m. – 9.00 p.m. IST */
   reception: {
-    title: "Wedding Reception of Dr. Nimisha Suresh & Dr. Rijul Padmanabhan M.",
+    title: "Wedding Reception of Dr. Nimisha Suresh & Dr. Rijul Padmanabhan",
     startUTC: "20261130T110000Z",
     endUTC:   "20261130T153000Z",
     details: "Reception from 4.30 p.m. to 9.00 p.m.",
@@ -45,7 +45,7 @@ const INVITE = {
   /* Text sent through WhatsApp (the page link is added automatically) */
   shareText:
     "🙏 Wedding Invitation\n" +
-    "Dr. Nimisha Suresh with Dr. Rijul Padmanabhan M.\n\n" +
+    "Dr. Nimisha Suresh with Dr. Rijul Padmanabhan\n\n" +
     "Thursday, 26 November 2026 (10th Vrischikam 1202)\n" +
     "Muhurtham between 11.25 a.m. and 11.50 a.m.\n" +
     "Guruvayoor Sree Krishna Swamy Temple\n\n" +

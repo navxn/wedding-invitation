@@ -260,3 +260,37 @@ document.querySelectorAll('.flower-sep, .divider').forEach(el =>
   addEventListener('resize', req);
   update();
 })();
+
+/* ---- the couple's names stay on one line each, at one shared size ----
+   The CSS sizes get very close; this trims a few percent more where a narrow phone or a slow
+   web font needs it, and re-checks on resize, rotation and once the fonts have loaded. */
+(() => {
+  const $$ = s => [...document.querySelectorAll(s)];
+  const groups = [
+    { lines: () => $$('.names>span'), sizers: () => $$('.names'),
+      limit: () => $('couple').clientWidth, width: el => el.offsetWidth },
+    { lines: () => $$('.bride-name'), sizers: () => $$('.bride-name'),
+      limit: () => $('invitation').clientWidth, width: el => el.offsetWidth },
+    { lines: () => $$('.sum-row dd.nm'), sizers: () => $$('.sum-row dd.nm'),
+      limit: () => Math.min(...$$('.sum-row dd.nm').map(e => e.clientWidth)), width: el => el.scrollWidth }
+  ];
+  const MIN = 14;
+  const fit = () => groups.forEach(g => {
+    const lines = g.lines(), sizers = g.sizers();
+    if (!lines.length) return;
+    sizers.forEach(s => { s.style.fontSize = ''; });
+    let size = parseFloat(getComputedStyle(sizers[0]).fontSize);
+    const limit = g.limit();
+    while (size > MIN && lines.some(l => g.width(l) > limit + .5)) {
+      size *= .97;
+      sizers.forEach(s => { s.style.fontSize = size.toFixed(2) + 'px'; });
+    }
+  });
+  let t = 0;
+  const later = () => { clearTimeout(t); t = setTimeout(fit, 120); };
+  fit();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  addEventListener('load', fit);
+  addEventListener('resize', later);
+  addEventListener('orientationchange', later);
+})();

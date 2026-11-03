@@ -1,4 +1,4 @@
-# Wedding Invitation — Dr. Nimisha Suresh & Dr. Rijul Padmanabhan M.
+# Wedding Invitation — Dr. Nimisha Suresh & Dr. Rijul Padmanabhan
 
 Static site (HTML + CSS + JS). No build step, no dependencies. Works on GitHub Pages (HTTPS).
 Only external request: Google Fonts (HTTPS).
